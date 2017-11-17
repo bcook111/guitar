@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: Dosis;
+	src: url(dosis-regular.tff) format('tff'),
+	     url(dosis-bold.ttf) format('ttf');
+}
+/* HTML and Body Styles */
+
+html {
+   background-image: url(background.jpg);
+   font-family: Dosis, Verdana, Geneva, Arial, sans-serif;
+}
+body {
+    background-color: rgb(230,230,250);
+    width: 85%;
+    margin: 0px auto;
+    box-shadow: 10px 10px 50px rgb(51,51,51), -10px 10px 50px rgb(51,51,51);
+}
+
+body article p {
+    text-indent: 25px; 
+}
+body article p:first-of-type::first-line {
+    font-variant: small-caps;
+    font-size: 1.2em;
+}
+
+/* nav & header */
+
+body > header {
+   background-image: url(header.jpg);
+   background-size: cover;
+   height: 250px;
+   margin-bottom: 30px;
+   position: relative;
+}
+
+body > header > nav.horizontal {
+    position: absolute;
+    bottom: 0px;
+}
+
+body > header > nav.horizontal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    width: 100%;
+}
+body > header > nav.horizontal li {
+    float: left;
+    list-style-type: none;
+}
+
+body > header > nav.horizontal li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: rgb(16, 17, 17);
+}
+body > header > nav.horizontal li a:hover {
+    background-color: darkslategray;
+}
+
+
+
+
+/* left section */
+
+section#left {
+   margin-top: 25px;
+   float: left;
+   padding-bottom: 20px;
+   width: 20%;
+}
+
+section#left nav.vertical {
+   background-color: snow;
+   margin: 0px auto 20px;
+   width: 80%;
+}
+
+section#left nav.vertical h1 {
+   color: white;
+   background-color: black;
+   font-size: 1.1em;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   width: 100%;
+}
+
+section#left nav.vertical {
+    border: 1px solid black;
+    border-radius: 25px;
+}
+section#left nav.vertical > h1 {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+
+}
+section#left nav.vertical ul li {
+   font-size: 12px;
+   line-height: 2;
+   margin: 5px 0px 5px 20px;
+}
+section#left nav.vertical ul li a {
+    color: black;
+}
+
+section#left nav.vertical ul li a:hover {
+    color: gray;
+}
+/* center */
+
+section#center article {
+   font-family: Dosis, Verdana, Geneva, Arial, sans-serif;
+   margin: 5px auto;
+   padding: 20px;
+   width: 60%;
+   border-style: double;
+   background-color: snow;
+   overflow: visible;
+   foo ;
+}
+
+section#center article header h1 {
+   font-size: 1.8em;
+   font-weight: normal;
+   margin: 10px;
+   text-align: center;
+   text-decoration: underline;
+}
+
+section#center article figure {
+    float: left;
+    margin: 20px;
+}
+
+/* footer */
+footer {
+   background-color: gainsboro;
+   clear: left;
+   margin-top: 25px;
+   text-align: right;
+}
+
+footer, footer span a {
+   padding: 10px;
+   color: darkslategrey;
+}
+
+footer span a:hover {
+   color: rosybrown;
+   text-decoration: underline;
+}
+
+/* flex/response */
+    
+section#center article div#flex {
+    width: auto;
+    height: 20px;
+    border: 1px solid black;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    text-align: center;   
+}
+
+section#center article div#flex a {
+    color: black;
+}
+section#center article div#flex a:hover {
+    color: wheat;
+}
+    
+#flex div {
+    -webkit-flex: 1;
+    -ms-flex: 1;  
+    flex: 1;
+}
+
+a#navicon {
+        display: none;
+    }
+
+/* =============================
+	Mobile Styles: 0 - 480 pixels
+   ============================= */
+@media only screen and (max-width: 480px) {
+
+a#navicon {
+        display: block;
+    }
+nav.horizontal ul {
+        display: none;
+    }   
+    
+nav.horizontal li{
+        width: 100%
+    }
+a#navicon:hover+ul, nav.horizontal ul:hover {
+        display: block;
+    }
+    
+nav.vertical {
+        display: none;
+    }
+section#center article figure {
+    display: none;
+    }
+    
+section#center article {
+   font-family: Dosis, Verdana, Geneva, Arial, sans-serif;
+   margin: 5px auto;
+   padding: 15px;
+   width: 90%;
+}
+}
+
+/* =================================================
+	Tablet and Desktop Styles: 481 pixels and greater
+   ================================================= */
+@media only screen and (min-width: 481px) {
+        
+a#navicon {
+    display: none;
+    }
+ }
+    
+    
